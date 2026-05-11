@@ -1,13 +1,7 @@
 import React from 'react';
-import { ExternalLink, Search, Star, ShieldAlert, Monitor, ChevronRight, Calendar, CloudSun } from 'lucide-react';
+import { ExternalLink, Star, ShieldAlert, ChevronRight, Calendar, CloudSun } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const AdSpace = ({ height = '88px', label = 'Anúncio Google AdSense' }) => (
-  <div className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded bg-[#fafafa] my-4 w-full max-w-[1100px] mx-auto" style={{ height }}>
-    <Monitor className="text-gray-300 mb-2" size={32} />
-    <span className="text-gray-400 text-sm">{label}</span>
-  </div>
-);
+import AdSpace from '../components/AdSpace';
 
 const ServiceCard = ({ icon: Icon, iconColor, iconBg, title, description, links }) => (
   <div className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200">
@@ -355,10 +349,7 @@ export default function Home() {
         {/* Sidebar */}
         <aside className="w-full md:w-[300px] flex flex-col gap-4">
            {/* Sidebar Ad Top */}
-           <div className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded bg-[#fafafa] w-full h-[260px]">
-            <Monitor className="text-gray-300 mb-2" size={32} />
-            <span className="text-gray-400 text-xs text-center px-4">Anúncio Google AdSense — 300 × 250 Sidebar topo</span>
-          </div>
+           <AdSpace height="260px" label="Anúncio Google AdSense — 300 × 250 Sidebar topo" />
 
           <div className="bg-white border border-gray-200 rounded-xl p-4">
             <h4 className="font-bold text-sm mb-4 border-b border-gray-100 pb-2">Links mais acessados</h4>
@@ -387,10 +378,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded bg-[#fafafa] w-full h-[260px]">
-            <Monitor className="text-gray-300 mb-2" size={32} />
-            <span className="text-gray-400 text-xs text-center px-4">Anúncio Google AdSense — 300 × 250 Sidebar meio</span>
-          </div>
+          <AdSpace height="260px" label="Anúncio Google AdSense — 300 × 250 Sidebar meio" />
 
           <div className="bg-primary-light border border-primary-medium/10 rounded-xl p-4">
              <div className="flex items-center gap-2 mb-2">
@@ -402,10 +390,7 @@ export default function Home() {
              </p>
           </div>
 
-          <div className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded bg-[#fafafa] w-full h-[320px]">
-            <Monitor className="text-gray-300 mb-2" size={32} />
-            <span className="text-gray-400 text-xs text-center px-4">Anúncio Google AdSense — 300 × 320 Sidebar inferior</span>
-          </div>
+          <AdSpace height="320px" label="Anúncio Google AdSense — 300 × 320 Sidebar inferior" />
 
           <div className="bg-white border border-gray-200 rounded-xl p-4">
             <h4 className="font-bold text-sm mb-4 border-b border-gray-100 pb-2">Apps oficiais gratuitos</h4>
@@ -424,10 +409,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded bg-[#fafafa] w-full h-[260px]">
-            <Monitor className="text-gray-300 mb-2" size={32} />
-            <span className="text-gray-400 text-xs text-center px-4">Anúncio Google AdSense — 300 × 250 Sidebar rodapé</span>
-          </div>
+          <AdSpace height="260px" label="Anúncio Google AdSense — 300 × 250 Sidebar rodapé" />
         </aside>
       </main>
 

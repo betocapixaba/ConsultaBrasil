@@ -1,13 +1,7 @@
 import React from 'react';
-import { Monitor, ChevronLeft, ExternalLink, Info, ShieldCheck, Car } from 'lucide-react';
+import { ChevronLeft, ExternalLink, Info, ShieldCheck, Car } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
-const AdSpace = ({ height = '88px', label = 'Anúncio Google AdSense', width = 'max-w-[1100px]' }) => (
-  <div className={`flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded bg-[#fafafa] my-4 ${width} mx-auto`} style={{ height }}>
-    <Monitor className="text-gray-300 mb-2" size={32} />
-    <span className="text-gray-400 text-sm italic">{label}</span>
-  </div>
-);
+import AdSpace from '../components/AdSpace';
 
 const RegionSection = ({ title, emoji, color, bgColor, states }) => (
   <div className="mb-12">
@@ -195,10 +189,7 @@ export default function Ipva() {
 
         {/* Sidebar */}
         <aside className="w-full md:w-[300px] flex flex-col gap-6">
-          <div className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded bg-[#fafafa] w-full h-[260px]">
-            <Monitor className="text-gray-300 mb-2" size={32} />
-            <span className="text-gray-400 text-xs text-center px-4">300 × 250 Sidebar</span>
-          </div>
+          <AdSpace height="260px" label="300 × 250 Sidebar" />
 
           <div className="bg-white border border-gray-200 rounded-xl p-5">
             <h4 className="font-bold text-sm mb-4 border-b border-gray-100 pb-2 flex items-center gap-2">
@@ -229,20 +220,14 @@ export default function Ipva() {
             </ul>
           </div>
 
-          <div className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded bg-[#fafafa] w-full h-[260px]">
-            <Monitor className="text-gray-300 mb-2" size={32} />
-            <span className="text-gray-400 text-xs text-center px-4">300 × 250 Sidebar</span>
-          </div>
+          <AdSpace height="260px" label="300 × 250 Sidebar" />
 
           <div className="bg-primary-light border border-primary-medium/20 rounded-xl p-5 text-primary text-xs leading-relaxed font-medium">
              <ShieldCheck size={20} className="mb-2 shrink-0" />
              🔒 <strong>Segurança garantida</strong> — Todos os 27 links desta página redirecionam exclusivamente para portais oficiais dos governos estaduais.
           </div>
 
-          <div className="flex flex-col items-center justify-center border-2 border-dashed border-gray-300 rounded bg-[#fafafa] w-full h-[300px]">
-            <Monitor className="text-gray-300 mb-2" size={32} />
-            <span className="text-gray-400 text-xs text-center px-4">300 × 300 Sidebar inferior</span>
-          </div>
+          <AdSpace height="300px" label="300 × 300 Sidebar inferior" />
 
           <div className="bg-white border border-gray-200 rounded-xl p-5">
             <h4 className="font-bold text-sm mb-4 border-b border-gray-100 pb-2">Total de estados</h4>
