@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sora: "Sora", sans-serif;
+  --font-serif: "Source Serif 4", serif;
+  
+  --color-primary: #0F6E56;
+  --color-primary-medium: #1D9E75;
+  --color-primary-light: #E1F5EE;
+  --color-accent-blue: #185FA5;
+  --color-accent-blue-light: #E6F1FB;
+  --color-accent-yellow: #BA7517;
+  --color-accent-yellow-light: #FAEEDA;
+  --color-accent-red: #993C1D;
+  --color-accent-red-light: #FAECE7;
+  --color-accent-purple: #534AB7;
+  --color-accent-purple-light: #EEEDFE;
+  --color-bg-main: #f7f8f5;
+}
+
+@layer base {
+  body {
+    @apply font-sora bg-bg-main text-[#1a1a1a];
+  }
+}
+
+@keyframes pulse-bar {
+  0% { transform: scaleX(1); opacity: 0.8; }
+  50% { transform: scaleX(1.1); opacity: 1; }
+  100% { transform: scaleX(1); opacity: 0.8; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes pulse-icon {
+  0% { transform: scale(1); filter: drop-shadow(0 0 0px #FFD93D); }
+  50% { transform: scale(1.1); filter: drop-shadow(0 0 8px #FFD93D); }
+  100% { transform: scale(1); filter: drop-shadow(0 0 0px #FFD93D); }
+}
+
+.animate-pulse-bar {
+  animation: pulse-bar 2s infinite ease-in-out;
+}
+
+.animate-blink {
+  animation: blink 1s infinite step-end;
+}
+
+.animate-pulse-icon {
+  animation: pulse-icon 2s infinite ease-in-out;
+}

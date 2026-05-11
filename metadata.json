@@ -1,0 +1,6 @@
+{
+  "name": "ConsultaBrasil",
+  "description": "Portal de serviços públicos brasileiros simples e direto ao ponto.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}
